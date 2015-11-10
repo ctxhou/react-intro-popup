@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import PopPop from '../../react-poppop/index';
+// import PopPop from '../../react-poppop/index';
+import PopPop from 'react-poppop';
 import classNames from 'classnames';
 import STYLE from './style';
 
@@ -56,19 +57,25 @@ export default class IntroPopup extends Component {
 
   render() { 
     const intro = this.getIntro();
-    let lastBtnTmpl,
-        nextBtnTmpl;
+    let lastBtnTmpl = '',
+        nextBtnTmpl = '';
+    let lastBtnName = this.props.lastBtnName ? this.props.lastBtnName : 'last';
+    let nextBtnName = this.props.nextBtnName ? this.props.nextBtnName : 'next';
+    const {
+      lastBtnClass,
+      nextBtnClass
+    } = this.props;
     if (this.state.active !== 0) {
-      lastBtnTmpl = <button className="last"
+      lastBtnTmpl = <button className={lastBtnClass}
                             onClick={this.handleLastBtn}>
-                            last
+                            {lastBtnName}
                     </button>;
     }
 
     if (this.state.active !== this.state.introLength) {
-      nextBtnTmpl = <button className="next"
+      nextBtnTmpl = <button className={nextBtnClass}
                             onClick={this.handleNextBtn}>
-                            next
+                            {nextBtnName}
                     </button>
     }
     return (
@@ -77,7 +84,6 @@ export default class IntroPopup extends Component {
               display='show'
               overlayClick={true}>
         {intro}
-        <hr/>
         <div>
           {lastBtnTmpl}
           {nextBtnTmpl}

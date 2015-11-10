@@ -3,9 +3,19 @@ import { render } from 'react-dom';
 import {IntroPopup, Intro} from "../index";
 
 render(
-  <IntroPopup>
+  <IntroPopup lastBtnName="上一步"
+              nextBtnName="下一步">
     <Intro>
-        intro1
+        <img src="http://www.duden.de/_media_/full/T/Toast-201100280976.jpg"/>
+        <h1>how to make toast</h1>
+      <h1>sjidfdsfsjdifjsdoifjoisjdfoi</h1>
+
+      <h1>sjidfdsfsjdifjsdoifjoisjdfoi</h1>
+
+      <h1>sjidfdsfsjdifjsdoifjoisjdfoi</h1>
+
+      <h1>sjidfdsfsjdifjsdoifjoisjdfoi</h1>
+        
     </Intro>
     <Intro>
         intro2
