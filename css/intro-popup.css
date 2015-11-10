@@ -1,0 +1,11 @@
+.intro {
+
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
