@@ -2,7 +2,15 @@
   "name": "react-intro-popup",
   "version": "0.0.2",
   "description": "react intro popup",
-  "main": "index.js",
+  "main": "lib/intro-popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "npm run clean && npm run build:webpack",
+    "clean": "rimraf dist",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:lib": "NODE_ENV=production babel src --out-dir lib"
+  },
   "peerDependencies": {
     "react": ">0.13.0"
   },

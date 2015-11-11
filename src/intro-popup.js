@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PopPop from '../../react-poppop/index';
+import PopPop from '../../react-poppop/lib/poppop';
 // import PopPop from 'react-poppop';
 import classNames from 'classnames';
 import STYLE from './style';
