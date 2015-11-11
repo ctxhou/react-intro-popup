@@ -9,6 +9,7 @@ export default class IntroPopup extends Component {
     super(props);
     this.handleLastBtn = this.handleLastBtn.bind(this);
     this.handleNextBtn = this.handleNextBtn.bind(this);
+    this.close = this.close.bind(this);
 
     const introLength = this.props.children.length - 1;
     this.state = {
@@ -53,12 +54,17 @@ export default class IntroPopup extends Component {
     })
   }
 
+  close() {
+
+  }
+
   render() { 
     const intro = this.getIntro();
     let lastBtnTmpl = '',
         nextBtnTmpl = '';
     let lastBtnName = this.props.lastBtnName ? this.props.lastBtnName : 'last';
     let nextBtnName = this.props.nextBtnName ? this.props.nextBtnName : 'next';
+    let finishBtnName = this.props.finishBtnName ? this.props.finishBtnName : 'finish';
     const {
       lastBtnClass,
       nextBtnClass
@@ -74,6 +80,11 @@ export default class IntroPopup extends Component {
       nextBtnTmpl = <button className={nextBtnClass}
                             onClick={this.handleNextBtn}>
                             {nextBtnName}
+                    </button>
+    } else {
+      nextBtnTmpl = <button className={nextBtnClass}
+                            onClick={this.close}>
+                            {finishBtnName}
                     </button>
     }
     return (
