@@ -1,8 +1,7 @@
 import React from 'react';
-import { render } from 'react-dom';
 import {IntroPopup, Intro} from "../index";
 
-render(
+React.render(
   <IntroPopup lastBtnName="上一步"
               nextBtnName="下一步">
     <Intro>
@@ -15,7 +14,7 @@ render(
       <h1>sjidfdsfsjdifjsdoifjoisjdfoi</h1>
 
       <h1>sjidfdsfsjdifjsdoifjoisjdfoi</h1>
-        
+
     </Intro>
     <Intro>
         intro2

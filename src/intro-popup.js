@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-// import PopPop from '../../react-poppop/index';
-import PopPop from 'react-poppop';
+import PopPop from '../../react-poppop/index';
+// import PopPop from 'react-poppop';
 import classNames from 'classnames';
 import STYLE from './style';
 
@@ -36,22 +35,22 @@ export default class IntroPopup extends Component {
   }
 
   handleLastBtn() {
-    ReactDOM.findDOMNode(this.refs['intro'+this.state.active]).style.display = 'none';
+    React.findDOMNode(this.refs['intro'+this.state.active]).style.display = 'none';
     const nextActive = this.state.active - 1;
     this.setState({
       active: nextActive
     }, function() {
-      ReactDOM.findDOMNode(this.refs['intro'+nextActive]).style.display = 'block';
+      React.findDOMNode(this.refs['intro'+nextActive]).style.display = 'block';
     })
   }
 
   handleNextBtn() {
-    ReactDOM.findDOMNode(this.refs['intro'+this.state.active]).style.display = 'none';
+    React.findDOMNode(this.refs['intro'+this.state.active]).style.display = 'none';
     const nextActive = this.state.active + 1;
     this.setState({
       active: nextActive
     }, function() {
-      ReactDOM.findDOMNode(this.refs['intro'+nextActive]).style.display = 'block';
+      React.findDOMNode(this.refs['intro'+nextActive]).style.display = 'block';
     })
   }
 
