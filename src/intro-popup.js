@@ -55,7 +55,7 @@ export default class IntroPopup extends Component {
   }
 
   close() {
-
+    this.props.close();
   }
 
   render() { 
@@ -67,7 +67,9 @@ export default class IntroPopup extends Component {
     let finishBtnName = this.props.finishBtnName ? this.props.finishBtnName : 'finish';
     const {
       lastBtnClass,
-      nextBtnClass
+      nextBtnClass,
+      closeBtn,
+      overlayClickClose
     } = this.props;
     if (this.state.active !== 0) {
       lastBtnTmpl = <button className={lastBtnClass}
@@ -91,7 +93,8 @@ export default class IntroPopup extends Component {
       <PopPop overlay={true}
               position="center"
               display='show'
-              overlayClick={true}>
+              closeBtn={closeBtn}
+              overlayClick={overlayClickClose}>
         {intro}
         <div>
           {lastBtnTmpl}
