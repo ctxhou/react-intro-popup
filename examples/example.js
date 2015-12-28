@@ -1,11 +1,12 @@
 import React from 'react';
-import {IntroPopup, Intro} from "../index";
+import ReactDOM from 'react-dom';
+import {IntroPopup, Intro} from "../";
 
 function close() {
   console.log('close')
 }
 
-React.render(
+ReactDOM.render(
   <IntroPopup lastBtnName="上一步"
               nextBtnName="下一步"
               finishBtnName="完成"
