@@ -12,6 +12,7 @@ ReactDOM.render(
               finishBtnName="完成"
               overlayClickClose={false}
               closeBtn={true}
+              style={{padding: "20px"}}
               close={close}>
     <Intro>
         intro3

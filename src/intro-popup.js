@@ -90,16 +90,19 @@ export default class IntroPopup extends Component {
                             {finishBtnName}
                     </button>
     }
+    console.log(this.props.style)
     return (
       <PopPop overlay={true}
               position="center"
               display='show'
               closeBtn={closeBtn}
               overlayClick={overlayClickClose}>
-        {intro}
-        <div>
-          {lastBtnTmpl}
-          {nextBtnTmpl}
+        <div style={this.props.style}>
+          {intro}
+          <div>
+            {lastBtnTmpl}
+            {nextBtnTmpl}
+          </div>
         </div>
       </PopPop>
     )
