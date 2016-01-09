@@ -1,6 +1,6 @@
 {
   "name": "react-intro-popup",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "react intro popup",
   "main": "lib/index.js",
   "scripts": {

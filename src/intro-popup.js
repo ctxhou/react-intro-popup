@@ -90,7 +90,7 @@ export default class IntroPopup extends Component {
                             {finishBtnName}
                     </button>
     }
-    console.log(this.props.style)
+
     return (
       <PopPop overlay={true}
               position="center"
