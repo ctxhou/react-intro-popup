@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node devServer.js",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build:watch": "babel -w --stage 0 src --out-dir lib",
     "build": "rm -rf ./lib && BABEL_ENV=production babel --stage 0 src --out-dir lib"
