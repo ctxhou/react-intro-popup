@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import STYLE from './style';
 
 export default class IntroPopup extends Component {
 
@@ -9,11 +8,10 @@ export default class IntroPopup extends Component {
   }
 
   render() {
-
     return (
       <div className={this.props.className}
-            style={this.props.style}
-            ref={this.props.ref}>
+           style={this.props.style}
+           ref={this.props.ref}>
         {this.props.children}
       </div>
     )

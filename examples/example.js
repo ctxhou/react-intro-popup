@@ -14,11 +14,15 @@ ReactDOM.render(
               closeBtn={true}
               style={{padding: "20px"}}
               close={close}>
-    <Intro>
-        intro3
+    <Intro style={{marginBottom: "20px"}}>
+        <h2>Intro1</h2>
+        <p>Description</p>
+        <img src="http://fakeimg.pl/300" alt=""/>
     </Intro>
     <Intro>
-        intro4
+        <h2>Intro2</h2>
+        <p>Description</p>
+        <img src="http://fakeimg.pl/300" alt=""/>
     </Intro>
   </IntroPopup>, 
   document.getElementById('root'));

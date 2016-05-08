@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PopPop from 'react-poppop';
 import classNames from 'classnames';
-import STYLE from './style';
 
 export default class IntroPopup extends Component {
 
@@ -25,6 +24,7 @@ export default class IntroPopup extends Component {
     React.Children.forEach(this.props.children, function(children, index) {
       let style = {};
       if (index === that.state.active) {
+        style = Object.assign({}, style, children.props.style);
         style.display = 'block';
       } else {
         style.display = 'none';
