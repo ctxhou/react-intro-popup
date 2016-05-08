@@ -99,7 +99,7 @@ export default class IntroPopup extends Component {
               overlayClick={overlayClickClose}>
         <div style={this.props.style}>
           {intro}
-          <div>
+          <div className={this.props.introBtnWrapper}>
             {lastBtnTmpl}
             {nextBtnTmpl}
           </div>
