@@ -55,10 +55,6 @@ export default class IntroPopup extends Component {
     })
   }
 
-  close() {
-    this.props.close();
-  }
-
   render() { 
     const intro = this.getIntro();
     let lastBtnTmpl = '',
@@ -86,7 +82,7 @@ export default class IntroPopup extends Component {
                     </button>
     } else {
       nextBtnTmpl = <button className={nextBtnClass}
-                            onClick={this.close}>
+                            onClick={this.props.close}>
                             {finishBtnName}
                     </button>
     }
