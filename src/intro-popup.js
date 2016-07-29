@@ -9,7 +9,6 @@ export default class IntroPopup extends Component {
     super(props);
     this.handleLastBtn = this.handleLastBtn.bind(this);
     this.handleNextBtn = this.handleNextBtn.bind(this);
-    this.close = this.close.bind(this);
 
     const introLength = this.props.children.length - 1;
     this.state = {
